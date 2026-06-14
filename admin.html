@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal Control Panel Console</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Access Gateway Security Modal Overlaid State -->
+    <div id="authGateModal" class="auth-gate-overlay">
+        <div class="auth-card-lockbox">
+            <h3>System Administrator Authentication Gateway</h3>
+            <p>Authorized personnel access path. Please provide your administrative credentials to continue.</p>
+            <div class="cyber-input-group">
+                <label>Admin Email Address</label>
+                <input type="email" id="authEmail" placeholder="admin@example.com">
+            </div>
+            <div class="cyber-input-group">
+                <label>Security Password</label>
+                <input type="password" id="authPassword" placeholder="••••••••">
+            </div>
+            <button id="loginSubmitBtn">Authenticate System Sign-In</button>
+            <div id="authFeedback" class="console-diagnostic-feedback" style="color: var(--neon-rose);"></div>
+        </div>
+    </div>
+
+    <nav class="sys-nav admin-nav-border">
+        <div class="nav-status">
+            <span class="status-pulse-red"></span>
+            <span class="nav-mode-text" style="color: var(--neon-rose);">Admin Management Console</span>
+        </div>
+        <div>
+            <button id="logoutBtn" class="console-btn back-btn" style="margin-right:10px; cursor:pointer;">Secure Sign-Out</button>
+            <a href="index.html" class="console-btn">← Back to Live Site</a>
+        </div>
+    </nav>
+
+    <div class="dossier-wrapper admin-mode">
+        <header class="terminal-header">
+            <h1>Content Management Dashboard</h1>
+            <p class="hero-subtitle">Update portfolio elements, stream storage assets directly, and review inbound user inquiries.</p>
+        </header>
+
+        <div class="admin-dual-layout">
+            <section class="cyber-admin-card">
+                <div class="card-title-bar">Add or Update Portfolio Content</div>
+                
+                <div class="cyber-input-group">
+                    <label for="contentType">Select Portfolio Destination Segment Collection</label>
+                    <select id="contentType">
+                        <option value="biography">About Me / Professional Summary</option>
+                        <option value="profile_pic">Profile Picture Avatar Image</option>
+                        <option value="cv">Curriculum Vitae (CV) PDF Document</option>
+                        <option value="skills">Technical Skill Matrix Element</option>
+                        <option value="projects">Project Showcase Card</option>
+                        <option value="experience">Professional Experience / Job History</option>
+                        <option value="education">Education / Academic Background</option>
+                        <option value="credentials">Certification / Professional Credential</option>
+                    </select>
+                </div>
+
+                <div class="cyber-input-group" id="titleGroupContainer">
+                    <label id="titleLabel" for="contentTitle">Title / Designation</label>
+                    <input type="text" id="contentTitle" placeholder="e.g., Hospital Alert & Communication System">
+                </div>
+
+                <div class="cyber-input-group" id="subtitleGroupContainer">
+                    <label id="subtitleLabel" for="contentSubtitle">Subtitle / Context / Level</label>
+                    <input type="text" id="contentSubtitle" placeholder="e.g., Java, Python, React Native">
+                </div>
+
+                <div class="cyber-input-group" id="descGroupContainer">
+                    <label id="descLabel" for="contentDesc">Description Summary Text Content</label>
+                    <textarea id="contentDesc" rows="5" placeholder="Describe the details or architectures here..."></textarea>
+                </div>
+
+                <div class="cyber-input-group" id="fileGroupContainer">
+                    <label id="fileLabel" for="contentFile">File Asset Upload Attachment (Pushed straight to cloud buckets)</label>
+                    <input type="file" id="contentFile" accept="image/*,.pdf">
+                    <span class="file-tip">Maximum secure upload limit is 5MB. Assets are stored dynamically via Firebase Storage.</span>
+                </div>
+
+                <button id="publishBtn">Publish Entry</button>
+            </section>
+
+            <div class="admin-right-column-stack">
+                <section class="cyber-admin-card">
+                    <div class="card-title-bar">Active Live Elements Registry</div>
+                    <div id="adminContentRegistry" class="terminal-scroll-box"></div>
+                </section>
+
+                <section class="cyber-admin-card contact-inbox-accent">
+                    <div class="card-title-bar" style="color: var(--neon-emerald);">Inbound Contact Messages</div>
+                    <div id="adminInboxRegistry" class="terminal-scroll-box"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio // Eng. Mutsawashe Abel Muchakaviri</title>
+    <!-- Open Graph Meta Tags for Clean Social Sharing Previews -->
+    <meta property="og:title" content="Eng. Mutsawashe Abel Muchakaviri | Computer Systems Engineer">
+    <meta property="og:description" content="ICT Officer for the Ministry of Health and Child Care, Zimbabwe. Specializing in systems architecture and infrastructure administration.">
+    <meta property="og:type" content="profile">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="sys-nav">
+        <div class="nav-status">
+            <span class="status-pulse-green"></span>
+            <span class="nav-mode-text">Public Portfolio View</span>
+        </div>
+        <div class="nav-social-links">
+            <a href="https://linkedin.com" target="_blank" class="social-nav-link">LinkedIn</a>
+            <a href="https://github.com" target="_blank" class="social-nav-link">GitHub</a>
+        </div>
+    </nav>
+
+    <div class="dossier-wrapper">
+        
+        <!-- Header Profile Card (Static Text Added for Instant SEO Crawler Indexing) -->
+        <header class="terminal-header-badge">
+            <div class="badge-grid-layout">
+                <div id="profilePicContainer" class="profile-pic-container">
+                    <!-- Dynamic Fallback Icon until Firebase Storage asset loads -->
+                    <div class="avatar-skeleton"></div>
+                </div>
+                
+                <div class="badge-identity-identity">
+                    <div class="tech-tag-badge">BSc (Hons) in Computer Systems Engineering</div>
+                    <h1>Eng. Mutsawashe Abel Muchakaviri</h1>
+                    <p class="badge-title-sub">ICT Officer — Muvonde Hospital</p>
+                    <p class="badge-institution-sub">Ministry of Health and Child Care (MoHCC), Zimbabwe</p>
+                    <p class="badge-academic-sub">Alumnus: Midlands State University</p>
+                    
+                    <div class="badge-comms-panel">
+                        <div class="comms-header-label">Contact Channels</div>
+                        <div class="comms-block">
+                            <span class="comms-label">Work Email</span>
+                            <a href="mailto:mutsawashemuchakaviri@zimhealth.gov.zw" class="comms-value">mutsawashemuchakaviri@zimhealth.gov.zw</a>
+                            <span class="comms-label">Personal Email</span>
+                            <a href="mailto:mutsawasheabelmuchakaviri@gmail.com" class="comms-value">mutsawasheabelmuchakaviri@gmail.com</a>
+                        </div>
+                        <div class="comms-block-split">
+                            <div>
+                                <span class="comms-label">Work Phone</span>
+                                <a href="tel:0716226641" class="comms-value">0716226641</a>
+                                <a href="https://wa.me/263716226641" target="_blank" class="whatsapp-quick-link">💬 WhatsApp</a>
+                            </div>
+                            <div>
+                                <span class="comms-label">Personal Phone</span>
+                                <a href="tel:0773107210" class="comms-value">0773107210</a>
+                                <a href="https://wa.me/263773107210" target="_blank" class="whatsapp-quick-link">💬 WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="dynamicIntroContainer" class="terminal-profile-box">
+                        <p class="loading-text">Synchronizing biography stream...</p>
+                    </div>
+                    <div id="cvDownloadContainer"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Technical Skills Section Matrix -->
+        <section id="sect-skills" class="dossier-block">
+            <div class="block-header"><h2>Technical Skills & Core Competencies</h2></div>
+            <div id="skillsContainer" class="skills-matrix-layout"><p class="loading-text">Loading matrices...</p></div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="sect-projects" class="dossier-block">
+            <div class="block-header"><h2>Projects & System Deployments</h2></div>
+            <div id="projectsGrid" class="tech-card-grid"><p class="loading-text">Loading deployments...</p></div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="sect-experience" class="dossier-block">
+            <div class="block-header"><h2>Professional Experience</h2></div>
+            <div id="experienceTimeline" class="tech-list-stack"><p class="loading-text">Loading operations history...</p></div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="sect-education" class="dossier-block">
+            <div class="block-header"><h2>Education & Academic Foundation</h2></div>
+            <div id="educationTimeline" class="tech-list-stack"><p class="loading-text">Loading academic records...</p></div>
+        </section>
+
+        <!-- Credentials Section -->
+        <section id="sect-awards" class="dossier-block">
+            <div class="block-header"><h2>Certifications & Credentials</h2></div>
+            <div id="awardsContainer" class="tech-card-grid credential-grid-accent"><p class="loading-text">Loading verifications...</p></div>
+        </section>
+
+        <!-- Secure Public Contact Form Node Section -->
+        <section class="dossier-block contact-block">
+            <div class="block-header"><h2>Send me a message</h2></div>
+            <p class="block-desc">Drop a line directly into my admin panel inbox below.</p>
+            <form id="contactForm" class="cyber-form">
+                <div class="form-row-split">
+                    <div class="cyber-input-group">
+                        <label for="visitorName">Your Name / Organization</label>
+                        <input type="text" id="visitorName" placeholder="Enter name or company" required>
+                    </div>
+                    <div class="cyber-input-group">
+                        <label for="visitorEmail">Email Address</label>
+                        <input type="email" id="visitorEmail" placeholder="name@example.com" required>
+                    </div>
+                </div>
+                <div class="cyber-input-group">
+                    <label for="visitorMessage">Your Message</label>
+                    <textarea id="visitorMessage" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" id="contactSubmitBtn">Send Message</button>
+            </form>
+            <div id="formStatus" class="console-diagnostic-feedback"></div>
+        </section>
+    </div>
+
+    <!-- Professional Consolidated Site Footer Layout -->
+    <footer class="portfolio-system-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Eng. Mutsawashe Abel Muchakaviri. All Rights Reserved.</p>
+            <p class="footer-meta">Ministry of Health and Child Care Portfolio // Current as of June 2026</p>
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
